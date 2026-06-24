@@ -18,7 +18,6 @@ def fmt_ptbr_int(valor):
 st.set_page_config(page_title="Mapa Goiás", layout="wide")
 st.title("Mapa Interativo — Municípios de Goiás")
 
-# ── 1. Carrega dados (cacheado para não reprocessar a cada interação) ─────────────
 @st.cache_data
 def carregar_geodados():
     url = "https://raw.githubusercontent.com/tbrugz/geodata-br/master/geojson/geojs-52-mun.json"
@@ -63,7 +62,6 @@ gdf_teste["pct_pob_fmt"] = gdf_teste["% pob"].apply(lambda x: fmt_ptbr_num(x, 2)
 gdf_teste["pob_p1_p2_fmt"] = gdf_teste["pob_p1_p2"].apply(fmt_ptbr_int)
 gdf_teste["pct_pob_p1_p2_fmt"] = gdf_teste["% pob_p1_p2"].apply(lambda x: fmt_ptbr_num(x, 2))
 
-# ── 2. Controles na sidebar ───────────────────────────────────────────────────────
 with st.sidebar:
     st.header("⚙️ Configurações")
 
@@ -88,7 +86,6 @@ with st.sidebar:
     )
     st.caption("Fonte: IBGE Sidra / Tabcad 2026")
 
-# ── 3. Título e métricas dinâmicos ────────────────────────────────────────────────
 titulos = {
     "norm_ext": "Percentual de Pessoas Inscritas em Extrema Pobreza (população municipal)",
     "norm_pob": "Percentual de Pessoas Inscritas em Pobreza (população municipal)",
@@ -102,7 +99,6 @@ legendas = {
 
 st.subheader(titulos[coluna])
 
-# ── 4. Mapa ───────────────────────────────────────────────────────────────────────
 m = gdf_teste.explore(
     column=coluna,
     cmap=paleta,
