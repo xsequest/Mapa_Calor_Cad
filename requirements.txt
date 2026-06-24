@@ -2,7 +2,8 @@ streamlit
 geopandas
 pandas
 streamlit-folium
-folium
+folium>=0.12
+matplotlib
 mapclassify
 branca
 openpyxl
