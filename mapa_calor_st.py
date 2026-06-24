@@ -71,7 +71,7 @@ with st.sidebar:
         format_func=lambda x: {
             "norm_ext": "Extrema Pobreza (P1) %",
             "norm_pob": "Pobreza (P2) %",
-            "norm_pob_p1_p2": "Pobreza (P1 e P2) %",
+            "norm_pob_p1_p2": "Pobreza PBF (P1 e P2) %",
 
         }[x]
     )
