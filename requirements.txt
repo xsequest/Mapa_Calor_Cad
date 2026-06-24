@@ -1,0 +1,8 @@
+streamlit
+geopandas
+pandas
+streamlit-folium
+folium
+mapclassify
+branca
+openpyxl
