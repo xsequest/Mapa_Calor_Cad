@@ -69,9 +69,9 @@ with st.sidebar:
         "Indicador",
         options=["norm_ext", "norm_pob", "norm_pob_p1_p2"],
         format_func=lambda x: {
-            "norm_ext": "Extrema Pobreza (P1) Percentual",
-            "norm_pob": "Pobreza (P2) Percentual",
-            "norm_pob_p1_p2": "Pobreza (P1 e P2) Percentual",
+            "norm_ext": "Extrema Pobreza (P1) %",
+            "norm_pob": "Pobreza (P2) %",
+            "norm_pob_p1_p2": "Pobreza (P1 e P2) %",
 
         }[x]
     )
