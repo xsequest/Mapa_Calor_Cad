@@ -6,7 +6,7 @@ import pandas as pd
 from streamlit_folium import st_folium
 from pathlib import Path
 
-caminho = Path(__file__).parent.parent / "data" / "Tabcad_pessoas_2026-06.xlsx"
+caminho = Path(__file__).parent / "data" / "Tabcad_pessoas_2026-06.xlsx"
 
 def fmt_ptbr_num(valor, casas=2):
     if pd.isna(valor):
