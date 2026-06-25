@@ -4,6 +4,9 @@ import json
 import urllib.request
 import pandas as pd
 from streamlit_folium import st_folium
+from pathlib import Path
+
+caminho = Path(__file__).parent.parent / "data" / "Tabcad_pessoas_2026-06.xlsx"
 
 def fmt_ptbr_num(valor, casas=2):
     if pd.isna(valor):
@@ -31,7 +34,7 @@ def carregar_geodados():
 @st.cache_data
 def carregar_planilha():
     df = pd.read_excel(
-        "/data/Tabcad_pessoas_2026-06.xlsx", sheet_name="Cad",
+        caminho, sheet_name="Cad",
         skipfooter=2
     )    
 
