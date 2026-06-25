@@ -89,7 +89,7 @@ with st.sidebar:
             "YlOrRd": "Amarelo -> Vermelho"
         }[x]
     )
-    st.caption("Fonte: IBGE Sidra / Jun. Tabcad 2026")
+    st.caption("Fonte: IBGE Sidra / Tabcad - Jun. 2026")
 
 titulos = {
     "norm_ext": "Percentual de Pessoas Inscritas em Extrema Pobreza (população municipal)",
