@@ -31,7 +31,7 @@ def carregar_geodados():
 @st.cache_data
 def carregar_planilha():
     df = pd.read_excel(
-        "Tabcad_pessoas_2026-06.xlsx", sheetname="Cad"
+        "Tabcad_pessoas_2026-06.xlsx", sheetname="Cad",
         skipfooter=2
     )    
 
