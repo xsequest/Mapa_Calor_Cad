@@ -16,7 +16,7 @@ def fmt_ptbr_int(valor):
     return f"{int(valor):,}".replace(",", ".")
 
 st.set_page_config(page_title="Mapa Goiás", layout="wide")
-st.title("Mapa Interativo — Municípios de Goiás")
+#st.title("Mapa Interativo — Municípios de Goiás")
 
 @st.cache_data
 def carregar_geodados():
@@ -31,7 +31,7 @@ def carregar_geodados():
 @st.cache_data
 def carregar_planilha():
     df = pd.read_excel(
-        "Tabcad_pessoas_2026-06.xlsx",
+        "Tabcad_pessoas_2026-06.xlsx", sheetname="Cad"
         skipfooter=2
     )    
 
@@ -78,10 +78,12 @@ with st.sidebar:
 
     paleta = st.selectbox(
         "Paleta de cores",
-        options=["viridis_r", "RdYlGn_r"],
+        options=["RdYlGn_r", "viridis_r", "plasma_r", "YlOrRd"],
         format_func=lambda x: {
-            "viridis_r": "Viridis (invertido)",
             "RdYlGn_r":  "Vermelho → Amarelo → Verde (invertido)",
+            "viridis_r": "Viridis (invertido)",
+            "plasma_r": "Plasma Invertido",
+            "YlOrRd": "Amarelo -> Vermelho"
         }[x]
     )
     st.caption("Fonte: IBGE Sidra / Tabcad 2026")
