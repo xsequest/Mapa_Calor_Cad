@@ -82,7 +82,7 @@ with st.sidebar:
             "Oranges": "Escala de Laranja"
         }[x]
     )
-    st.caption("Fonte: IBGE Sidra / Tabcad 2026")
+    st.caption("Fonte: IBGE Sidra / TRE-GO")
 
 titulos = {
     "norm_aptos_mun": "Percentual de Pessoas Aptas (população municipal)",
